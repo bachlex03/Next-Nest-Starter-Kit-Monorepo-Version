@@ -1,4 +1,5 @@
 {
+  "extends": "@nnsk-monorepo/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "module": "nodenext",
     "moduleResolution": "nodenext",
