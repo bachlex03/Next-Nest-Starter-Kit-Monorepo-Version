@@ -1,0 +1,12 @@
+{
+  "extends": "@nnsk-monorepo/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "drizzle.config.ts"]
+}

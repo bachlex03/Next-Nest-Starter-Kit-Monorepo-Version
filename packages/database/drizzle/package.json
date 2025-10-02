@@ -1,0 +1,40 @@
+{
+  "name": "@nnsk-monorepo/database-drizzle",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:drop": "drizzle-kit drop",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schemas": {
+      "require": "./dist/schemas.js",
+      "types": "./dist/schemas.d.ts"
+    },
+    "./schemas/*": {
+      "require": "./dist/schemas/*.js",
+      "types": "./dist/schemas/*.d.ts"
+    }
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.44.6",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@nnsk-monorepo/tsconfig": "workspace:*",
+    "@types/node": "^22",
+    "drizzle-kit": "^0.31.5"
+  }
+}
